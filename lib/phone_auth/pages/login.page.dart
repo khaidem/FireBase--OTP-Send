@@ -5,6 +5,7 @@ class LoginScreen extends StatelessWidget {
   final _passController = TextEditingController();
 
   LoginScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +29,13 @@ class LoginScreen extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                   enabledBorder: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      borderSide: BorderSide(color: Colors.grey)),
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
                   focusedBorder: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      borderSide: BorderSide(color: Colors.grey)),
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
                   filled: true,
                   fillColor: Colors.grey[100],
                   hintText: "Phone Number"),
@@ -41,27 +44,31 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                  enabledBorder: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      borderSide: BorderSide(color: Colors.grey)),
-                  focusedBorder: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      borderSide: BorderSide(color: Colors.grey)),
-                  filled: true,
-                  fillColor: Colors.grey[100],
-                  hintText: "Password"),
-              controller: _passController,
-            ),
+            // TextFormField(
+            //   decoration: InputDecoration(
+            //       enabledBorder: const OutlineInputBorder(
+            //         borderRadius: BorderRadius.all(Radius.circular(8)),
+            //         borderSide: BorderSide(color: Colors.white),
+            //       ),
+            //       focusedBorder: const OutlineInputBorder(
+            //         borderRadius: BorderRadius.all(Radius.circular(8)),
+            //         borderSide: BorderSide(color: Colors.white),
+            //       ),
+            //       filled: true,
+            //       fillColor: Colors.grey[100],
+            //       hintText: "Password"),
+            //   controller: _passController,
+            // ),
             const SizedBox(
               height: 16,
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                child: const Text("Login"),
-                onPressed: () {},
+                child: const Text("SendOtp"),
+                onPressed: () {
+                  //code for sign in
+                },
               ),
             )
           ],
