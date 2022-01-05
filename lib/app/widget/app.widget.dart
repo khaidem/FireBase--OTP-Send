@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:otp_auth/phone_auth/pages/home.page.dart';
 import 'package:otp_auth/phone_auth/pages/login.page.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: const MyHomePage(),
     );
   }
 }
